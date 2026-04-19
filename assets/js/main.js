@@ -1,36 +1,37 @@
 /**
-* Template Name: MyResume
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: MyResume
+ * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+ * Updated: Jun 29 2024 with Bootstrap v5.3.3
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
 (function() {
   "use strict";
 
   /**
-   * Header toggle
+   * Mobile Menu Toggle
    */
-  const headerToggleBtn = document.querySelector('.header-toggle');
-
-  function headerToggle() {
+  function toggleMenu() {
     document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
+    document.querySelector('.header-toggle').classList.toggle('bi-list');
+    document.querySelector('.header-toggle').classList.toggle('bi-x');
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
+
+  const headerToggleBtn = document.querySelector('.header-toggle');
+  if (headerToggleBtn) {
+    headerToggleBtn.addEventListener('click', toggleMenu);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
+  document.querySelectorAll('#navmenu a, #navmenu-mobile a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.header-show')) {
-        headerToggle();
+        toggleMenu();
       }
     });
-
   });
 
   /**

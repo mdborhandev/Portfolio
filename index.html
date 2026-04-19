@@ -5,676 +5,447 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Mohammed Borhan Uddin Fahim | Software Engineer</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Backend-focused Software Engineer | ASP.NET Core Developer" name="description">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="index-page body-dark">
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
+  <i class="header-toggle bi bi-list" onclick="toggleMenu()"></i>
 
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <nav class="floating-nav">
+    <a href="#hero" class="nav-icon active" title="Home"><i class="bi bi-house"></i></a>
+    <a href="#about" class="nav-icon" title="About"><i class="bi bi-person"></i></a>
+    <a href="#skills" class="nav-icon" title="Skills"><i class="bi bi-gear"></i></a>
+    <a href="#resume" class="nav-icon" title="Resume"><i class="bi bi-file-earmark-text"></i></a>
+    <a href="#projects" class="nav-icon" title="Projects"><i class="bi bi-hdd-stack"></i></a>
+    <a href="#contact" class="nav-icon" title="Contact"><i class="bi bi-envelope"></i></a>
+  </nav>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
-
+  <header id="header" class="mobile-menu">
+    <div class="mobile-menu-content">
+      <a href="#hero" onclick="closeMenu()"><i class="bi bi-house"></i> Home</a>
+      <a href="#about" onclick="closeMenu()"><i class="bi bi-person"></i> About</a>
+      <a href="#skills" onclick="closeMenu()"><i class="bi bi-gear"></i> Skills</a>
+      <a href="#resume" onclick="closeMenu()"><i class="bi bi-file-earmark-text"></i> Resume</a>
+      <a href="#projects" onclick="closeMenu()"><i class="bi bi-hdd-stack"></i> Projects</a>
+      <a href="#contact" onclick="closeMenu()"><i class="bi bi-envelope"></i> Contact</a>
+    </div>
   </header>
 
-  <main class="main">
-
+  <main>
     <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-10 text-center">
-            <h2 class="animate-fade-in-up">Mohammed Borhan Uddin Fahim</h2>
-            <p class="animate-fade-in-up delay-200"><span class="typed" data-typed-items="Software Engineer,ASP.NET Core Developer,Backend-Focused Full-Stack">I'm a </span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <p class="hero-tagline animate-fade-in-up delay-400">Building enterprise solutions with clean architecture & scalable systems</p>
-            <div class="social-links animate-fade-in-up delay-600">
-              <a href="https://linkedin.com/in/buf17" target="_blank"><i class="bi bi-linkedin"></i></a>
-              <a href="https://github.com/mdborhandev" target="_blank"><i class="bi bi-github"></i></a>
-              <a href="mailto:mdborhan.dev@gmail.com"><i class="bi bi-envelope"></i></a>
-              <a href="assets/img/Borhan-Fahim-Resume.pdf" download><i class="bi bi-download"></i></a>
-            </div>
-            <div class="mt-4 animate-fade-in-up delay-800">
-              <a href="#about" class="btn btn-glow">Explore More</a>
+    <section id="hero" class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="row min-vh-100 align-items-center justify-content-center text-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <h1 class="hero-name animate-fade-in-up">Mohammed Borhan Uddin Fahim</h1>
+            <p class="hero-title animate-fade-in-up delay-200">
+              <span class="typed-text" data-items="Software Engineer,ASP.NET Core Developer,Backend Developer"></span>
+              <span class="cursor">|</span>
+            </p>
+            <p class="hero-tagline animate-fade-in-up delay-400">Building enterprise solutions with clean architecture</p>
+            
+            <div class="hero-actions animate-fade-in-up delay-600">
+              <div class="social-links">
+                <a href="https://linkedin.com/in/buf17" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/mdborhandev" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="mailto:mdborhan.dev@gmail.com"><i class="bi bi-envelope"></i></a>
+                <a href="assets/img/Borhan-Fahim-Resume.pdf" download><i class="bi bi-download"></i></a>
+              </div>
+              <a href="#about" class="btn-explore">Explore More</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="hero-scroll">
+      <div class="scroll-indicator">
         <a href="#about"><i class="bi bi-chevron-down"></i></a>
       </div>
-
-    </section><!-- /Hero Section -->
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Backend-focused Software Engineer with hands-on experience building and maintaining production-level SaaS applications using ASP.NET Core, Entity Framework Core, and PostgreSQL. Experienced in designing secure REST APIs, implementing RBAC systems, and optimizing database performance. Strong understanding of clean architecture principles and scalable system design. Focused on delivering maintainable, high-performance enterprise solutions.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/Borhan.png" class="img-fluid rounded-circle" alt="">
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <p>Backend-focused Software Engineer with production-level SaaS experience</p>
+        </div>
+        
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-md-4 text-center">
+            <div class="about-img-wrapper">
+              <img src="assets/img/Borhan.png" alt="Borhan" class="about-img">
+            </div>
           </div>
-          <div class="col-lg-8 content">
-            <h2>Software Engineer | ASP.NET Core | Backend-Focused Full-Stack Developer</h2>
-            <p class="fst-italic py-3">
-              Building enterprise solutions with clean architecture, scalable backend systems, and optimized database performance.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Chattogram (Open to relocate to Dhaka)</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>01906750597</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>mdborhan.dev@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span>linkedin.com/in/buf17</span></li>
-                </ul>
+          <div class="col-12 col-md-8">
+            <h3>Software Engineer | ASP.NET Core Developer</h3>
+            <p class="lead">Building scalable enterprise solutions with clean architecture, secure APIs, and optimized database performance.</p>
+            
+            <div class="row g-3 about-info">
+              <div class="col-6 col-md-6">
+                <div class="info-item"><i class="bi bi-geo-alt"></i> <span>Chattogram, Bangladesh</span></div>
+                <div class="info-item"><i class="bi bi-telephone"></i> <span>01906750597</span></div>
+                <div class="info-item"><i class="bi bi-envelope"></i> <span>mdborhan.dev@gmail.com</span></div>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong> <span>github.com/mdborhandev</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Diploma in Computer Science</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span>2+ Years</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
+              <div class="col-6 col-md-6">
+                <div class="info-item"><i class="bi bi-linkedin"></i> <span>linkedin.com/in/buf17</span></div>
+                <div class="info-item"><i class="bi bi-code-slash"></i> <span>2+ Years Experience</span></div>
+                <div class="info-item"><i class="bi bi-briefcase"></i> <span>Available for Work</span></div>
               </div>
             </div>
-            <p class="py-3">
-              Dedicated to delivering high-quality enterprise solutions with a focus on maintainability, performance, and scalability. Passionate about building robust backend systems and solving complex problems.
-            </p>
           </div>
         </div>
-
       </div>
-
-    </section><!-- /About Section -->
+    </section>
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-emoji-smile"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
+    <section id="stats" class="section stats-section">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <i class="bi bi-people"></i>
+              <span class="stat-number" data-count="200">0</span>
               <p>Active Users</p>
             </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-journal-richtext"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <i class="bi bi-journal-richtext"></i>
+              <span class="stat-number" data-count="3">0</span>
               <p>Major Projects</p>
             </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-code-slash"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
-              <p>2+ Years Experience</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <i class="bi bi-code-slash"></i>
+              <span class="stat-number" data-count="2">0</span>
+              <p>Years Experience</p>
             </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-people"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1" class="purecounter"></span>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <i class="bi bi-mortarboard"></i>
+              <span class="stat-number" data-count="40">0</span>
               <p>Students Mentored</p>
             </div>
-          </div><!-- End Stats Item -->
-
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Stats Section -->
+    </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Backend-focused developer with expertise in building scalable enterprise solutions using ASP.NET Core and database optimization.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-        
-            <div class="progress">
-              <span class="skill"><span>ASP.NET Core MVC & Web API</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-            <div class="progress">
-              <span class="skill"><span>Entity Framework Core</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-            <div class="progress">
-              <span class="skill"><span>PostgreSQL & SQL Server</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-            <div class="progress">
-              <span class="skill"><span>RESTful API Design & JWT</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-            <div class="progress">
-              <span class="skill"><span>Clean Architecture</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-          </div>
-        
-          <div class="col-lg-6">
-        
-            <div class="progress">
-              <span class="skill"><span>HTML5 & CSS3</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-            <div class="progress">
-              <span class="skill"><span>JavaScript & jQuery</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-            <div class="progress">
-              <span class="skill"><span>Bootstrap & Tailwind CSS</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-            <div class="progress">
-              <span class="skill"><span>Git & GitHub</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-            <div class="progress">
-              <span class="skill"><span>Docker & CI/CD</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-        
-          </div>
-        
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <p>Technologies I work with</p>
         </div>
         
-
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <div class="skill-item">
+              <div class="skill-info"><span>ASP.NET Core MVC & Web API</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Entity Framework Core</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>PostgreSQL & SQL Server</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>RESTful API & JWT</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="skill-item">
+              <div class="skill-info"><span>HTML5 & CSS3</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>JavaScript & jQuery</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Bootstrap & Tailwind</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Git & GitHub</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </section><!-- /Skills Section -->
+    </section>
 
     <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>
-          Backend-focused Software Engineer with hands-on experience building and maintaining production-level SaaS applications using ASP.NET Core, Entity Framework Core, and PostgreSQL. Experienced in designing secure REST APIs, implementing RBAC systems, and optimizing database performance.
-        </p>
-
-      </div><!-- End Section Title -->
-
+    <section id="resume" class="section">
       <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Mohammed Borhan Uddin Fahim</h4>
-              <p><em>Backend-focused Software Engineer with hands-on experience building and maintaining production-level SaaS applications using ASP.NET Core, Entity Framework Core, and PostgreSQL. Strong understanding of clean architecture principles and scalable system design.</em></p>
-              <ul>
-                <li>Chattogram, Bangladesh (Open to relocate to Dhaka)</li>
-                <li>01906750597</li>
-                <li>mdborhan.dev@gmail.com</li>
-              </ul>
-            </div><!-- End Resume Item -->            
-
-            <h3 class="resume-title">Education</h3>
-
-            <div class="resume-item">
-              <h4>Diploma in Computer Science</h4>
-              <h5>2020 - 2024</h5>
-              <p><em>A K Khan UCEP Polytechnic Institute, Chattogram, Bangladesh</em></p>
-              <p>GPA: 3.82/4.0</p>
-            </div><!-- End Resume Item -->
-            
-            <div class="resume-item">
-              <h4>Secondary School Certificate</h4>
-              <h5>2020</h5>
-              <p><em>West Kadhurkhil School & College, Chattogram, Bangladesh</em></p>
-              <p>GPA: 3.94/5.0</p>
-            </div><!-- End Resume Item -->
-            
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-          
-            <div class="resume-item">
-              <h4>Junior Programmer</h4>
-              <h5>March 2024 - Present</h5>
-              <p><em>Genuine Technology & Research Ltd., Chattogram, Bangladesh</em></p>
-              <ul>
-                <li>Developed and maintained SaaS-based HRM system serving 200+ active users.</li>
-                <li>Designed and implemented Role-Based Access Control (RBAC) and multi-level approval workflows.</li>
-                <li>Built secure RESTful APIs using ASP.NET Core Web API with JWT authentication.</li>
-                <li>Improved API response time by approximately 30% through EF Core query optimization.</li>
-                <li>Participated in code reviews, Git-based collaboration, and Agile sprint planning.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-          
-            <div class="resume-item">
-              <h4>Guest Trainer (Frontend Development)</h4>
-              <h5>December 2023 - February 2024</h5>
-              <p><em>A K Khan UCEP TVET Institute, Chattogram, Bangladesh</em></p>
-              <ul>
-                <li>Delivered structured training on HTML, CSS, JavaScript, and responsive web design.</li>
-                <li>Mentored 40+ students in building real-world full-stack projects.</li>
-                <li>Guided students in understanding backend fundamentals and database design principles.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-          
-          </div>
-          
+        <div class="section-header">
+          <h2>Resume</h2>
+          <p>Professional experience and education</p>
         </div>
-
+        
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <h3 class="resume-title">Experience</h3>
+            
+            <div class="resume-card">
+              <span class="resume-date">March 2024 - Present</span>
+              <h4>Junior Programmer</h4>
+              <p class="company">Genuine Technology & Research Ltd.</p>
+              <ul>
+                <li>Developed SaaS-based HRM system for 200+ users</li>
+                <li>Built RESTful APIs with JWT authentication</li>
+                <li>Implemented RBAC and approval workflows</li>
+                <li>Optimized API response by 30%</li>
+              </ul>
+            </div>
+            
+            <div class="resume-card">
+              <span class="resume-date">Dec 2023 - Feb 2024</span>
+              <h4>Guest Trainer</h4>
+              <p class="company">A K Khan UCEP TVET Institute</p>
+              <ul>
+                <li>Trained 40+ students in Frontend Dev</li>
+                <li>HTML, CSS, JavaScript training</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-6">
+            <h3 class="resume-title">Education</h3>
+            
+            <div class="resume-card">
+              <span class="resume-date">2020 - 2024</span>
+              <h4>Diploma in Computer Science</h4>
+              <p class="company">A K Khan UCEP Polytechnic Institute</p>
+              <p>GPA: 3.82/4.0</p>
+            </div>
+            
+            <div class="resume-card">
+              <span class="resume-date">2020</span>
+              <h4>Secondary School Certificate</h4>
+              <p class="company">West Kadhurkhil School & College</p>
+              <p>GPA: 3.94/5.0</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </section><!-- /Resume Section -->
-
-    
+    </section>
 
     <!-- Projects Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Projects</h2>
-        <p>Production-level SaaS applications built with ASP.NET Core, Entity Framework Core, and PostgreSQL.</p>
-      </div><!-- End Section Title -->
-
+    <section id="projects" class="section">
       <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <div class="icon">
-                <i class="bi bi-people"></i>
-              </div>
-              <h3>Halda - SaaS HRM Platform</h3>
-              <p>Developed employee management, onboarding, payroll, attendance, and performance modules with RBAC and dynamic approval hierarchy.</p>
-              <p><strong>Tech Stack:</strong> ASP.NET Core MVC, Web API, EF Core, PostgreSQL</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item item-orange position-relative">
-              <div class="icon">
-                <i class="bi bi-bar-chart"></i>
-              </div>
-              <h3>OKR - Goal & Task Management System</h3>
-              <p>Designed OKR-based team goal tracking system with performance dashboards and dynamic reporting.</p>
-              <p><strong>Tech Stack:</strong> ASP.NET Core MVC, EF Core, PostgreSQL</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item item-teal position-relative">
-              <div class="icon">
-                <i class="bi bi-lightbulb"></i>
-              </div>
-              <h3>SmartSLead - Lead Management System</h3>
-              <p>Comprehensive lead management platform for tracking, managing, and converting leads through the sales pipeline.</p>
-              <p><strong>Tech Stack:</strong> ASP.NET Core MVC, EF Core, PostgreSQL</p>
-            </div>
-          </div><!-- End Service Item -->
-
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>Production-level SaaS applications</p>
         </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>“Dedicated to delivering high-quality software solutions and fostering an environment of continuous learning. Consistently demonstrates excellent problem-solving skills and a passion for technology.”</p>
-      </div><!-- End Section Title -->
-      
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>“Mohammed Borhan Uddin Fahim has shown exceptional dedication and skill in his field of software development. His ability to solve complex problems and contribute to team projects with both frontend and backend expertise makes him a valuable asset. He continuously strives to improve and stay ahead in his field, showcasing a strong passion for technology.”</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Md Romanul Hoque</h3>
-                      <h4>Head of Computer Science Department, A K Khan UCEP Polytechnic Institute</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                    
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/roman.png" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>“Mohammed Borhan Uddin Fahim has consistently demonstrated a strong work ethic, technical skills, and problem-solving abilities. His dedication to excellence in software development is evident through his contributions to various projects, and he continuously strives to enhance his knowledge and skills. I am confident that he will continue to succeed in his career.”</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Masud Alam</h3>
-                      <h4>Regional Manager, UCEP Chattogram</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/masud.jpg" class="img-fluid testimonial-img" alt="Masud Alam">
-                  </div>
-                  
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>“Mohammed Borhan Uddin Fahim has consistently demonstrated strong technical skills, creativity, and a passion for software development. His ability to adapt to new challenges and deliver high-quality work makes him a valuable member of the software development team. He has shown great potential and dedication in his work, and I am confident in his continued growth and success.”</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Rubayet Fahad</h3>
-                      <h4>Head of Software Development, Genuine Technology & Research Ltd.</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/fahad.jpg" class="img-fluid testimonial-img" alt="Rubayet Fahad">
-                  </div>                  
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>“Mohammed Borhan Uddin Fahim has consistently demonstrated excellent technical expertise, problem-solving skills, and a collaborative approach to team projects. His contributions have been crucial to the success of several initiatives. He is a quick learner and always eager to tackle new challenges, making him a valuable member of our team.”</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Sourav Singha</h3>
-                      <h4>Programmer</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/sowrap.jpg" class="img-fluid testimonial-img" alt="Sourav Singha">
-                  </div>
-                  
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+        
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-people"></i></div>
+              <h4>Halda - SaaS HRM Platform</h4>
+              <p>Employee management, payroll, attendance & performance modules with RBAC.</p>
+              <div class="project-tech">ASP.NET Core MVC | Web API | EF Core | PostgreSQL</div>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="col-12 col-md-6">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-bar-chart"></i></div>
+              <h4>OKR - Goal & Task Management</h4>
+              <p>OKR-based team goal tracking with performance dashboards.</p>
+              <div class="project-tech">ASP.NET Core MVC | EF Core | PostgreSQL</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="project-card">
+              <div class="project-icon"><i class="bi bi-lightbulb"></i></div>
+              <h4>SmartSLead - Lead Management</h4>
+              <p>Comprehensive lead management for sales pipeline.</p>
+              <div class="project-tech">ASP.NET Core MVC | EF Core | PostgreSQL</div>
+            </div>
+          </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Testimonials Section -->
-
-   <!-- Contact Section -->
-<section id="contact" class="contact section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Feel free to reach out for collaborations, inquiries, or any questions you may have!</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade" data-aos-delay="100">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-4">
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-          <i class="bi bi-geo-alt flex-shrink-0"></i>
-          <div>
-            <h3>Address</h3>
-            <p>Chattogram, Bangladesh</p>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Get in touch</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-12 col-md-5">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <h4>Location</h4>
+                  <p>Chattogram, Bangladesh</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-telephone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <p>01906750597</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>mdborhan.dev@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-linkedin"></i>
+                <div>
+                  <h4>LinkedIn</h4>
+                  <p>linkedin.com/in/buf17</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div><!-- End Info Item -->
-
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-          <i class="bi bi-telephone flex-shrink-0"></i>
-          <div>
-            <h3>Call Me</h3>
-            <p>+880 1906 750 597</p>
+          <div class="col-12 col-md-7">
+            <form class="contact-form">
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-12 col-md-6">
+                  <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control" placeholder="Subject" required>
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn-submit">Send Message</button>
+                </div>
+              </div>
+            </form>
           </div>
-        </div><!-- End Info Item -->
-
-        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-          <i class="bi bi-envelope flex-shrink-0"></i>
-          <div>
-            <h3>Email Me</h3>
-            <p>mdborhan.dev@gmail.com</p>
-          </div>
-        </div><!-- End Info Item -->
-
+        </div>
       </div>
+    </section>
 
-      <div class="col-lg-8">
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
-            </div>
-
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <h3>Mohammed Borhan Uddin Fahim</h3>
+          <p>Backend-focused Software Engineer</p>
+          <div class="footer-social">
+            <a href="https://linkedin.com/in/buf17"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/mdborhandev"><i class="bi bi-github"></i></a>
+            <a href="mailto:mdborhan.dev@gmail.com"><i class="bi bi-envelope"></i></a>
           </div>
-        </form>
-      </div><!-- End Contact Form -->
-
-    </div>
-
-  </div>
-
-</section><!-- /Contact Section -->
-
-
+          <p class="copyright">&copy; 2025 All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <h3 class="sitename">Mohammed Borhan Uddin Fahim</h3>
-      <p>Backend-focused Software Engineer building enterprise solutions with ASP.NET Core, PostgreSQL, and clean architecture.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://linkedin.com/in/buf17"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/mdborhandev"><i class="bi bi-github"></i></a>
-        <a href="mailto:mdborhan.dev@gmail.com"><i class="bi bi-envelope"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Mohammed Borhan Uddin Fahim</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          Designed by <a href="#">BUF</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      document.getElementById('header').classList.toggle('active');
+    }
+    
+    function closeMenu() {
+      document.getElementById('header').classList.remove('active');
+    }
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    // Initialize AOS
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out',
+      once: true
+    });
 
+    // Typed Effect
+    const typedEl = document.querySelector('.typed-text');
+    if (typedEl) {
+      const items = typedEl.dataset.items.split(',');
+      let i = 0;
+      let timer;
+      function type() {
+        typedEl.textContent = items[i];
+        i = (i + 1) % items.length;
+        timer = setTimeout(type, 2000);
+      }
+      type();
+    }
+
+    // Stats Counter Animation
+    const stats = document.querySelectorAll('.stat-number');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const count = parseInt(el.dataset.count);
+          let current = 0;
+          const increment = count / 50;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= count) {
+              el.textContent = count + '+';
+              clearInterval(timer);
+            } else {
+              el.textContent = Math.floor(current);
+            }
+          }, 30);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    stats.forEach(stat => observer.observe(stat));
+
+    // Active Nav on Scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.floating-nav a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
